@@ -8,19 +8,26 @@ const GlobalStyles = createGlobalStyle`
   }
   
   html {
-    /* font-size: 62.5%; */
     scroll-behavior: smooth;
+    font-size: 62.5%;
+    
+    ${
+			"" /* @media ${(props) => props.theme.md} {
+		  font-size: 56.25%;
+    }
 
+    @media ${(props) => props.theme.sm} {
+		  font-size: 50%;
+    } */
+		}
   }
   
   body {
     font-family: ${(props) => props.theme.fonts.main};
-    /* font-size: 1.6rem; */
-    font-size: 1rem;
+    font-size: 1.6rem;
     background: ${(props) => props.theme.colors.background1};
     color: ${(props) => props.theme.colors.primary1};
     cursor: default;
-
   }
   
   h1,h2,h3,h4,h5,h6,button {
@@ -28,6 +35,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   a {
+  	color: inherit;
     text-decoration: none;
   }
   

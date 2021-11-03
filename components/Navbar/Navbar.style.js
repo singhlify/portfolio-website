@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
-export const AdminHeading = styled.h1`
-	font-size: clamp(1.3rem, 2.5vw, 3rem);
-	color: #5a6270;
-	@media ${(props) => props.theme.breakpoints.xl} {
-		width: 100%;
-	}
+export const NavContainer = styled.div`
+	font-size: 1.6rem;
 `;
 
-export const NavLinks = styled.div`
+export const NavLogo = styled.div`
+	font-family: inherit;
+	font-size: 2.4rem;
+`;
+
+export const NavDeskLinks = styled.div``;
+
+export const NavMobLinks = styled.div`
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -25,6 +28,7 @@ export const NavLinks = styled.div`
 		transform: translate(-50%, -50%);
 		list-style: none;
 		text-align: center;
+		width: fit-content;
 
 		li {
 			margin: 15px 0;
@@ -87,7 +91,7 @@ export const NavCheckBox = styled.input.attrs((props) => {
 })`
 	display: none;
 
-	&:checked ~ ${NavLinks} {
+	&:checked ~ ${NavMobLinks} {
 		clip-path: circle(75%);
 	}
 
