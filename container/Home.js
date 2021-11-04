@@ -1,6 +1,9 @@
 import React from "react";
 import Head from "next/head";
 import Navbar from "../components/Navbar/Navbar";
+import IntroSection from "../components/IntroSection/IntroSection";
+import MainWrapper from "components/MainWrapper/MainWrapper";
+import PostsSection from "@/components/PostsSection/PostsSection";
 
 const Home = () => {
 	return (
@@ -16,6 +19,12 @@ const Home = () => {
 			</Head>
 
 			<Navbar />
+
+			<MainWrapper>
+				<IntroSection />
+			</MainWrapper>
+
+			<PostsSection />
 		</>
 	);
 };

@@ -2,11 +2,17 @@ import styled from "styled-components";
 
 export const NavContainer = styled.div`
 	font-size: 1.6rem;
+	padding: 2rem 1rem;
+
+	position: sticky;
+	top: 0;
 `;
 
 export const NavLogo = styled.div`
 	font-family: inherit;
-	font-size: 2.4rem;
+	${"" /* font-size: 2.4rem; */}
+	font-size: clamp(2.4rem, 3vw, 4rem);
+	${"" /* font-size: clamp(1.5rem, 2.5vw, 2.5rem); */}
 `;
 
 export const NavDeskLinks = styled.div``;
@@ -17,8 +23,12 @@ export const NavMobLinks = styled.div`
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: linear-gradient(-135deg, #c850c0, #4158d0);
-	clip-path: circle(25px at calc(100% - 45px) 45px);
+	${
+		"" /* background: linear-gradient(-135deg, #c850c0, #4158d0);
+	background: linear-gradient(-135deg, #ff6464, #ff6464); */
+	}
+	background: #ff6464;
+	clip-path: circle(25px at calc(100% - 35px) 35px);
 	transition: all 0.3s ease-in-out;
 
 	ul {
@@ -62,7 +72,8 @@ export const NavMobLinks = styled.div`
 				}
 
 				&:hover {
-					color: #4158d0;
+					${"" /* color: #4158d0; */}
+					color: #142850;
 				}
 			}
 		}
@@ -72,8 +83,8 @@ export const NavMobLinks = styled.div`
 export const MenuBtn = styled.label`
 	position: absolute;
 	z-index: 2;
-	right: 20px;
-	top: 20px;
+	right: 1rem;
+	top: 1rem;
 	height: 50px;
 	width: 50px;
 	text-align: center;
@@ -82,7 +93,8 @@ export const MenuBtn = styled.label`
 	font-size: 20px;
 	color: #fff;
 	cursor: pointer;
-	background: linear-gradient(-135deg, #c850c0, #4158d0);
+	${"" /* background: linear-gradient(-135deg, #c850c0, #4158d0); */}
+	background: #ff6464;
 	transition: all 0.3s ease-in-out;
 `;
 
@@ -97,7 +109,8 @@ export const NavCheckBox = styled.input.attrs((props) => {
 
 	&:checked ~ ${MenuBtn} {
 		background: #fff;
-		color: #4158d0;
+		${"" /* color: #4158d0; */}
+		color: #142850;
 
 		i:before {
 			content: "\f00d";
