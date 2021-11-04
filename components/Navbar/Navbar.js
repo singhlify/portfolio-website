@@ -11,11 +11,11 @@ import {
 const Navbar = () => {
 	return (
 		<>
-			<NavContainer>
+			{/* <NavContainer>
 				<NavLogo>Gurjot Singh</NavLogo>
 
 				<NavDeskLinks></NavDeskLinks>
-			</NavContainer>
+			</NavContainer> */}
 
 			<NavCheckBox type="checkbox" id="active" />
 

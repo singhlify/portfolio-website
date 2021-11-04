@@ -19,9 +19,11 @@ const IntroSection = () => {
 			</IntroImg>
 			<IntroText>
 				<h1>
-					Hi, I am John,
+					Hi, I am Gurjot,
 					<br />
-					Creative Technologist
+					Full-Stack
+					<br />
+					Web Developer
 				</h1>
 
 				<p>

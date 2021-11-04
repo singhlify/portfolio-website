@@ -28,7 +28,8 @@ export const NavMobLinks = styled.div`
 	background: linear-gradient(-135deg, #ff6464, #ff6464); */
 	}
 	background: #ff6464;
-	clip-path: circle(25px at calc(100% - 35px) 35px);
+	${"" /* clip-path: circle(25px at calc(100% - 35px) 35px); */}
+	clip-path: circle(24px at calc(100% - 35px) 35px);
 	transition: all 0.3s ease-in-out;
 
 	ul {
@@ -81,7 +82,7 @@ export const NavMobLinks = styled.div`
 `;
 
 export const MenuBtn = styled.label`
-	position: absolute;
+	${"" /* position: absolute; */}
 	z-index: 2;
 	right: 1rem;
 	top: 1rem;
@@ -91,11 +92,20 @@ export const MenuBtn = styled.label`
 	line-height: 50px;
 	border-radius: 50%;
 	font-size: 20px;
-	color: #fff;
+	${"" /* color: #fff; */}
 	cursor: pointer;
 	${"" /* background: linear-gradient(-135deg, #c850c0, #4158d0); */}
-	background: #ff6464;
+	${"" /* background: #ff6464; */}
 	transition: all 0.3s ease-in-out;
+
+	position: sticky;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+
+	background: #fff;
+	color: #000;
 `;
 
 export const NavCheckBox = styled.input.attrs((props) => {

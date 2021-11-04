@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar/Navbar";
 import IntroSection from "../components/IntroSection/IntroSection";
 import MainWrapper from "components/MainWrapper/MainWrapper";
 import PostsSection from "@/components/PostsSection/PostsSection";
+import FooterSection from "@/components/FooterSection/FooterSection";
 
 const Home = () => {
 	return (
@@ -20,11 +21,13 @@ const Home = () => {
 
 			<Navbar />
 
-			<MainWrapper>
-				<IntroSection />
-			</MainWrapper>
+			{/* <MainWrapper>
+			</MainWrapper> */}
 
-			<PostsSection />
+			<IntroSection />
+			{/* <PostsSection /> */}
+
+			<FooterSection />
 		</>
 	);
 };
