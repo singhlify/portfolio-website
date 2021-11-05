@@ -10,9 +10,7 @@ export const NavContainer = styled.div`
 
 export const NavLogo = styled.div`
 	font-family: inherit;
-	${"" /* font-size: 2.4rem; */}
 	font-size: clamp(2.4rem, 3vw, 4rem);
-	${"" /* font-size: clamp(1.5rem, 2.5vw, 2.5rem); */}
 `;
 
 export const NavDeskLinks = styled.div``;
@@ -23,12 +21,7 @@ export const NavMobLinks = styled.div`
 	left: 0;
 	height: 100%;
 	width: 100%;
-	${
-		"" /* background: linear-gradient(-135deg, #c850c0, #4158d0);
-	background: linear-gradient(-135deg, #ff6464, #ff6464); */
-	}
 	background: #ff6464;
-	${"" /* clip-path: circle(25px at calc(100% - 35px) 35px); */}
 	clip-path: circle(2.4rem at calc(100% - 3.5rem) 3.5rem);
 	transition: all 0.3s ease-in-out;
 	z-index: 1;
@@ -73,7 +66,6 @@ export const NavMobLinks = styled.div`
 				}
 
 				&:hover {
-					${"" /* color: #4158d0; */}
 					color: ${(props) => props.theme.colors.dark};
 				}
 			}
@@ -82,7 +74,6 @@ export const NavMobLinks = styled.div`
 `;
 
 export const MenuBtn = styled.label`
-	${"" /* position: absolute; */}
 	z-index: 2;
 	right: 1rem;
 	top: 1rem;
@@ -92,10 +83,7 @@ export const MenuBtn = styled.label`
 	line-height: 5rem;
 	border-radius: 50%;
 	font-size: 2rem;
-	${"" /* color: #fff; */}
 	cursor: pointer;
-	${"" /* background: linear-gradient(-135deg, #c850c0, #4158d0); */}
-	${"" /* background: #ff6464; */}
 	transition: all 0.3s ease-in-out;
 
 	position: sticky;
@@ -119,7 +107,6 @@ export const NavCheckBox = styled.input.attrs((props) => {
 
 	&:checked ~ ${MenuBtn} {
 		background: ${(props) => props.theme.colors.white};
-		${"" /* color: #4158d0; */}
 		color: ${(props) => props.theme.colors.dark};
 
 		i:before {

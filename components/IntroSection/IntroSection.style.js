@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Button from "@mui/material/Button";
 
 export const Section = styled.section`
-	${"" /* padding: 0 1rem; */}
 	margin: 3.7rem 1rem 5.8rem;
 
 	.buttonContainer {
@@ -19,7 +18,6 @@ export const CustomButton = styled(Button)`
 	padding: 1rem 2rem;
 	border-radius: 0.2rem;
 	background: #ff6464;
-	${"" /* z-index: 0; */}
 
 	&:hover {
 		background: #ff6464;
@@ -28,12 +26,7 @@ export const CustomButton = styled(Button)`
 
 export const IntroImg = styled.div`
 	max-width: 16.6rem;
-	${"" /* margin: 3.6rem auto; */}
 	margin: 0 auto 3.6rem;
-
-	img {
-		${"" /* z-index: -1; */}
-	}
 `;
 
 export const IntroText = styled.div`
