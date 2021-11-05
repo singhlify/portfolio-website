@@ -14,7 +14,7 @@ export const CustomButton = styled(Button)`
 	font-size: 2rem;
 	font-weight: 500;
 	text-transform: capitalize;
-	color: #ffffff;
+	color: ${(props) => props.theme.colors.white};
 	margin: auto;
 	padding: 1rem 2rem;
 	border-radius: 0.2rem;

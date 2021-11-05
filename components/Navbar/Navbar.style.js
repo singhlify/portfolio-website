@@ -46,20 +46,19 @@ export const NavMobLinks = styled.div`
 			margin: 1.5rem 0;
 
 			a {
-				color: none;
 				text-decoration: none;
 				font-size: 3rem;
 				font-weight: 500;
 				padding: 0.5rem 3rem;
-				color: #fff;
 				position: relative;
 				line-height: 5rem;
 				transition: all 0.3s ease;
+				color: ${(props) => props.theme.colors.white};
 
 				&:after {
 					position: absolute;
 					content: "";
-					background: #fff;
+					background: ${(props) => props.theme.colors.white};
 					width: 100%;
 					height: 5rem;
 					left: 0;
@@ -75,7 +74,7 @@ export const NavMobLinks = styled.div`
 
 				&:hover {
 					${"" /* color: #4158d0; */}
-					color: #142850;
+					color: ${(props) => props.theme.colors.dark};
 				}
 			}
 		}
@@ -105,8 +104,8 @@ export const MenuBtn = styled.label`
 	align-items: center;
 	margin-left: auto;
 
-	background: #fff;
-	color: #000;
+	background: ${(props) => props.theme.colors.white};
+	color: ${(props) => props.theme.colors.black};
 `;
 
 export const NavCheckBox = styled.input.attrs((props) => {
@@ -119,9 +118,9 @@ export const NavCheckBox = styled.input.attrs((props) => {
 	}
 
 	&:checked ~ ${MenuBtn} {
-		background: #fff;
+		background: ${(props) => props.theme.colors.white};
 		${"" /* color: #4158d0; */}
-		color: #142850;
+		color: ${(props) => props.theme.colors.dark};
 
 		i:before {
 			content: "\f00d";

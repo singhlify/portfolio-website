@@ -11,13 +11,13 @@ export const Footer = styled.footer`
 		max-width: 23.2rem;
 		max-width: 25rem;
 		font-size: 3rem;
-		color: #21243d;
+		${"" /* color: #21243d; */}
 
 		i {
 			transition: all 0.3s ease-in-out;
 
 			&:hover {
-				color: #ff6464;
+				color: ${(props) => props.theme.colors.primary};
 				transform: scale(1.1);
 				cursor: pointer;
 			}
@@ -25,7 +25,7 @@ export const Footer = styled.footer`
 	}
 
 	p {
-		color: #21243d;
+		${"" /* color: ${(props) => props.theme.colors.dark}; */}
 		font-weight: normal;
 		font-size: 1.4rem;
 		line-height: 2.1rem;
