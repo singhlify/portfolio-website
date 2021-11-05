@@ -25,21 +25,21 @@ export const Section = styled.section`
 `;
 
 export const CustomButton = styled(Button)`
-	font-size: 2rem;
-	font-weight: 500;
-	text-transform: capitalize;
-	color: ${(props) => props.theme.colors.white};
-	margin: auto;
-	padding: 1rem 2rem;
-	border-radius: 0.2rem;
-	background: #ff6464;
+	font-size: 2rem !important;
+	font-weight: 500 !important;
+	text-transform: capitalize !important;
+	color: ${(props) => props.theme.colors.white} !important;
+	margin: auto !important;
+	padding: 1rem 2rem !important;
+	border-radius: 0.2rem !important;
+	background: ${(props) => props.theme.colors.primary} !important;
 
 	&:hover {
-		background: #ff6464;
+		background: ${(props) => props.theme.colors.primary} !important;
 	}
 
 	@media ${(props) => props.theme.breakpoints.md} {
-		margin: unset;
+		margin: unset !important;
 	}
 `;
 
