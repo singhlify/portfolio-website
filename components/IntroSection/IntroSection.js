@@ -35,6 +35,7 @@ const IntroSection = () => {
 					<CustomButton
 						href={resumeLink}
 						target="_blank"
+						rel="noreferrer"
 						variant="contained"
 						disableElevation
 					>

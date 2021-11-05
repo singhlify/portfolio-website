@@ -26,19 +26,23 @@ const FooterSection = () => {
 	return (
 		<Footer>
 			<div className="socialIcons">
-				<a href="https://github.com/Blink98" target="_blank">
+				<a href="https://github.com/Blink98" target="_blank" rel="noreferrer">
 					<i className="fab fa-github"></i>
 				</a>
-				<a href="https://www.linkedin.com/in/gsingh5k/" target="_blank">
+				<a
+					href="https://www.linkedin.com/in/gsingh5k/"
+					target="_blank"
+					rel="noreferrer"
+				>
 					<i className="fab fa-linkedin"></i>
 				</a>
-				<a href="https://twitter.com/gsingh5k" target="_blank">
+				<a href="https://twitter.com/gsingh5k" target="_blank" rel="noreferrer">
 					<i className="fab fa-twitter"></i>
 				</a>
 
 				<i onClick={copyEmail} className="fas fa-envelope"></i>
 
-				<a href="https://dribbble.com/blink99" target="_blank">
+				<a href="https://dribbble.com/blink99" target="_blank" rel="noreferrer">
 					<i className="fab fa-dribbble"></i>
 				</a>
 			</div>
