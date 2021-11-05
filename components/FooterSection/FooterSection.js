@@ -42,7 +42,7 @@ const FooterSection = () => {
 					<i className="fab fa-dribbble"></i>
 				</a>
 			</div>
-			<p>Made with ❤️</p>
+			<p>Handcrafted with ❤️</p>
 
 			<Snackbar
 				anchorOrigin={{ vertical, horizontal }}

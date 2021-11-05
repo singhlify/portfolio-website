@@ -22,8 +22,7 @@ const IntroSection = () => {
 					Hi, I am Gurjot,
 					<br />
 					Full-Stack
-					<br />
-					Web Developer
+					<br /> Developer
 				</h1>
 
 				<p>
