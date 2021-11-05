@@ -27,9 +27,9 @@ const IntroSection = () => {
 				</h1>
 
 				<p>
-					Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-					sint. Velit officia consequat duis enim velit mollit. Exercitation
-					veniam consequat sunt nostrud amet.
+					Meticulous web developer with hands-on experience and keenness for
+					responsive website design and a firm believer in the mobile-first
+					approach.
 				</p>
 
 				<div className="buttonContainer">

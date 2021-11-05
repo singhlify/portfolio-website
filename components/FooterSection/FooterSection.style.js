@@ -7,7 +7,9 @@ export const Footer = styled.footer`
 		display: flex;
 		margin: auto;
 		justify-content: space-between;
+		align-items: center;
 		max-width: 23.2rem;
+		max-width: 25rem;
 		font-size: 3rem;
 		color: #21243d;
 
@@ -29,5 +31,12 @@ export const Footer = styled.footer`
 		line-height: 2.1rem;
 		text-align: center;
 		margin-top: 2.6rem;
+	}
+
+	.snackbar__alert {
+		font-weight: 500;
+		font-size: 1.4rem;
+		line-height: 1.43;
+		letter-spacing: 0.01071em;
 	}
 `;

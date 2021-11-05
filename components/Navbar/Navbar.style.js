@@ -29,8 +29,9 @@ export const NavMobLinks = styled.div`
 	}
 	background: #ff6464;
 	${"" /* clip-path: circle(25px at calc(100% - 35px) 35px); */}
-	clip-path: circle(24px at calc(100% - 35px) 35px);
+	clip-path: circle(2.4rem at calc(100% - 3.5rem) 3.5rem);
 	transition: all 0.3s ease-in-out;
+	z-index: 1;
 
 	ul {
 		position: absolute;
@@ -42,17 +43,17 @@ export const NavMobLinks = styled.div`
 		width: fit-content;
 
 		li {
-			margin: 15px 0;
+			margin: 1.5rem 0;
 
 			a {
 				color: none;
 				text-decoration: none;
-				font-size: 30px;
+				font-size: 3rem;
 				font-weight: 500;
-				padding: 5px 30px;
+				padding: 0.5rem 3rem;
 				color: #fff;
 				position: relative;
-				line-height: 50px;
+				line-height: 5rem;
 				transition: all 0.3s ease;
 
 				&:after {
@@ -60,9 +61,9 @@ export const NavMobLinks = styled.div`
 					content: "";
 					background: #fff;
 					width: 100%;
-					height: 50px;
+					height: 5rem;
 					left: 0;
-					border-radius: 50px;
+					border-radius: 5rem;
 					transform: scaleY(0);
 					z-index: -1;
 					transition: transform 0.3s ease;
@@ -86,12 +87,12 @@ export const MenuBtn = styled.label`
 	z-index: 2;
 	right: 1rem;
 	top: 1rem;
-	height: 50px;
-	width: 50px;
+	height: 5rem;
+	width: 5rem;
 	text-align: center;
-	line-height: 50px;
+	line-height: 5rem;
 	border-radius: 50%;
-	font-size: 20px;
+	font-size: 2rem;
 	${"" /* color: #fff; */}
 	cursor: pointer;
 	${"" /* background: linear-gradient(-135deg, #c850c0, #4158d0); */}

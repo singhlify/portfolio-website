@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 
 export const Section = styled.section`
 	${"" /* padding: 0 1rem; */}
-	margin: 8.7rem 1rem 5.8rem;
+	margin: 3.7rem 1rem 5.8rem;
 
 	.buttonContainer {
 		display: flex;
@@ -17,9 +17,9 @@ export const CustomButton = styled(Button)`
 	color: #ffffff;
 	margin: auto;
 	padding: 1rem 2rem;
-	border-radius: 2px;
+	border-radius: 0.2rem;
 	background: #ff6464;
-	z-index: -1;
+	${"" /* z-index: 0; */}
 
 	&:hover {
 		background: #ff6464;
@@ -32,7 +32,7 @@ export const IntroImg = styled.div`
 	margin: 0 auto 3.6rem;
 
 	img {
-		z-index: -1;
+		${"" /* z-index: -1; */}
 	}
 `;
 
@@ -41,7 +41,7 @@ export const IntroText = styled.div`
 		font-size: 3.2rem;
 		font-weight: 600;
 		max-width: 31rem;
-		line-height: 40px;
+		line-height: 4rem;
 
 		text-align: center;
 		margin: auto;
