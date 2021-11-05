@@ -17,13 +17,15 @@ const Navbar = () => {
 				<NavDeskLinks></NavDeskLinks>
 			</NavContainer> */}
 
-			<NavCheckBox type="checkbox" id="active" />
+			<div style={{ height: "5rem" }}></div>
 
-			<MenuBtn htmlFor="active">
+			{/* <NavCheckBox type="checkbox" id="active" /> */}
+
+			{/* <MenuBtn htmlFor="active">
 				<i className="fas fa-bars"></i>
-			</MenuBtn>
+			</MenuBtn> */}
 
-			<NavMobLinks>
+			{/* <NavMobLinks>
 				<ul>
 					<li>
 						<a href="#">Home</a>
@@ -41,7 +43,7 @@ const Navbar = () => {
 						<a href="#">Feedback</a>
 					</li>
 				</ul>
-			</NavMobLinks>
+			</NavMobLinks> */}
 		</>
 	);
 };
