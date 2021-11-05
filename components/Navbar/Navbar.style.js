@@ -1,22 +1,30 @@
 import styled from "styled-components";
 
-export const AdminHeading = styled.h1`
-	font-size: clamp(1.3rem, 2.5vw, 3rem);
-	color: #5a6270;
-	@media ${(props) => props.theme.breakpoints.xl} {
-		width: 100%;
-	}
+export const NavContainer = styled.div`
+	font-size: 1.6rem;
+	padding: 2rem 1rem;
+
+	position: sticky;
+	top: 0;
 `;
 
-export const NavLinks = styled.div`
+export const NavLogo = styled.div`
+	font-family: inherit;
+	font-size: clamp(2.4rem, 3vw, 4rem);
+`;
+
+export const NavDeskLinks = styled.div``;
+
+export const NavMobLinks = styled.div`
 	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: linear-gradient(-135deg, #c850c0, #4158d0);
-	clip-path: circle(25px at calc(100% - 45px) 45px);
+	background: #ff6464;
+	clip-path: circle(2.4rem at calc(100% - 3.5rem) 3.5rem);
 	transition: all 0.3s ease-in-out;
+	z-index: 1;
 
 	ul {
 		position: absolute;
@@ -25,29 +33,29 @@ export const NavLinks = styled.div`
 		transform: translate(-50%, -50%);
 		list-style: none;
 		text-align: center;
+		width: fit-content;
 
 		li {
-			margin: 15px 0;
+			margin: 1.5rem 0;
 
 			a {
-				color: none;
 				text-decoration: none;
-				font-size: 30px;
+				font-size: 3rem;
 				font-weight: 500;
-				padding: 5px 30px;
-				color: #fff;
+				padding: 0.5rem 3rem;
 				position: relative;
-				line-height: 50px;
+				line-height: 5rem;
 				transition: all 0.3s ease;
+				color: ${(props) => props.theme.colors.white};
 
 				&:after {
 					position: absolute;
 					content: "";
-					background: #fff;
+					background: ${(props) => props.theme.colors.white};
 					width: 100%;
-					height: 50px;
+					height: 5rem;
 					left: 0;
-					border-radius: 50px;
+					border-radius: 5rem;
 					transform: scaleY(0);
 					z-index: -1;
 					transition: transform 0.3s ease;
@@ -58,7 +66,7 @@ export const NavLinks = styled.div`
 				}
 
 				&:hover {
-					color: #4158d0;
+					color: ${(props) => props.theme.colors.dark};
 				}
 			}
 		}
@@ -66,20 +74,26 @@ export const NavLinks = styled.div`
 `;
 
 export const MenuBtn = styled.label`
-	position: absolute;
 	z-index: 2;
-	right: 20px;
-	top: 20px;
-	height: 50px;
-	width: 50px;
+	right: 1rem;
+	top: 1rem;
+	height: 5rem;
+	width: 5rem;
 	text-align: center;
-	line-height: 50px;
+	line-height: 5rem;
 	border-radius: 50%;
-	font-size: 20px;
-	color: #fff;
+	font-size: 2rem;
 	cursor: pointer;
-	background: linear-gradient(-135deg, #c850c0, #4158d0);
 	transition: all 0.3s ease-in-out;
+
+	position: sticky;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+
+	background: ${(props) => props.theme.colors.white};
+	color: ${(props) => props.theme.colors.black};
 `;
 
 export const NavCheckBox = styled.input.attrs((props) => {
@@ -87,13 +101,13 @@ export const NavCheckBox = styled.input.attrs((props) => {
 })`
 	display: none;
 
-	&:checked ~ ${NavLinks} {
+	&:checked ~ ${NavMobLinks} {
 		clip-path: circle(75%);
 	}
 
 	&:checked ~ ${MenuBtn} {
-		background: #fff;
-		color: #4158d0;
+		background: ${(props) => props.theme.colors.white};
+		color: ${(props) => props.theme.colors.dark};
 
 		i:before {
 			content: "\f00d";

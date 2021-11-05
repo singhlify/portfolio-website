@@ -8,26 +8,34 @@ const GlobalStyles = createGlobalStyle`
   }
   
   html {
-    /* font-size: 62.5%; */
     scroll-behavior: smooth;
+    font-size: 62.5%;
+    
+    ${
+			"" /* @media ${(props) => props.theme.md} {
+		  font-size: 56.25%;
+    }
 
+    @media ${(props) => props.theme.sm} {
+		  font-size: 50%;
+    } */
+		}
   }
   
   body {
+    font-size: 1.6rem;
     font-family: ${(props) => props.theme.fonts.main};
-    /* font-size: 1.6rem; */
-    font-size: 1rem;
-    background: ${(props) => props.theme.colors.background1};
-    color: ${(props) => props.theme.colors.primary1};
+    background: ${(props) => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.dark};
     cursor: default;
-
   }
   
   h1,h2,h3,h4,h5,h6,button {
-    font-family: ${(props) => props.theme.fonts.title};
+    font-family: ${(props) => props.theme.fonts.main};
   }
   
   a {
+  	color: inherit;
     text-decoration: none;
   }
   

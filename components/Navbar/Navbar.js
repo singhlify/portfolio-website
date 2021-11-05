@@ -1,21 +1,31 @@
 import React from "react";
-import { NavLinks, NavCheckBox, MenuBtn } from "./Navbar.style";
+import {
+	NavCheckBox,
+	MenuBtn,
+	NavContainer,
+	NavLogo,
+	NavDeskLinks,
+	NavMobLinks,
+} from "./Navbar.style";
 
 const Navbar = () => {
 	return (
 		<>
-			{/* <input type="checkbox" id="active" /> */}
-			<NavCheckBox type="checkbox" id="active" />
-			{/* <label htmlFor="active" className="menu-btn">
-				<i className="fas fa-bars"></i>
-			</label> */}
+			{/* <NavContainer>
+				<NavLogo>Gurjot Singh</NavLogo>
 
-			<MenuBtn htmlFor="active">
-				<i className="fas fa-bars"></i>
-			</MenuBtn>
-			{/* <div className="wrapper"> */}
+				<NavDeskLinks></NavDeskLinks>
+			</NavContainer> */}
 
-			<NavLinks>
+			<div style={{ height: "5rem" }}></div>
+
+			{/* <NavCheckBox type="checkbox" id="active" /> */}
+
+			{/* <MenuBtn htmlFor="active">
+				<i className="fas fa-bars"></i>
+			</MenuBtn> */}
+
+			{/* <NavMobLinks>
 				<ul>
 					<li>
 						<a href="#">Home</a>
@@ -33,8 +43,7 @@ const Navbar = () => {
 						<a href="#">Feedback</a>
 					</li>
 				</ul>
-			</NavLinks>
-			{/* </div> */}
+			</NavMobLinks> */}
 		</>
 	);
 };
