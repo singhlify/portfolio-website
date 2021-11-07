@@ -12,6 +12,7 @@ const ProjectsSection = () => {
 	// https://api.github.com/users/blink98/repos
 	const [projects, setProjects] = useState([]);
 	const [projectImgs, setProjectImgs] = useState([]);
+	const [projectYears, setProjectYears] = useState([]);
 
 	const getProjects = async () => {
 		try {
@@ -23,10 +24,6 @@ const ProjectsSection = () => {
 			console.log("error>>>", error);
 		}
 	};
-
-	useEffect(() => {
-		getProjects();
-	}, []);
 
 	const getProjectImgs = async () => {
 		try {
@@ -44,49 +41,94 @@ const ProjectsSection = () => {
 		}
 	};
 
+	const getProjectYears = async () => {
+		try {
+			const gitRepos = await axios.get(
+				"https://api.github.com/users/blink98/repos"
+			);
+
+			const projectYearsArr = [];
+			gitRepos.data.map((repo, index) => {
+				projects.map((project) => {
+					repo.html_url = repo.html_url.toLowerCase();
+					project.link = project.link.toLowerCase();
+					if (repo.html_url === project.link) {
+						projectYearsArr.push({
+							name: repo.name,
+							createdYear: repo.created_at.slice(0, 4),
+						});
+						return repo;
+					}
+				});
+			});
+
+			setProjectYears(projectYearsArr);
+		} catch (error) {
+			console.log("error>>>", error);
+		}
+	};
+
+	const getProjectYear = (projectName) => {
+		if (projectName && projectYears.length) {
+			let a = "";
+			projectYears.forEach((projectYear) => {
+				if (projectYear.name === projectName) {
+					console.log("projectYear.name>>>", projectYear.name);
+					console.log("projectName>>>", projectName);
+					a = projectYear.createdYear;
+				}
+			});
+			return a;
+		}
+	};
+
+	useEffect(() => {
+		getProjects();
+	}, []);
+
 	useEffect(() => {
 		if (projects.length) {
 			getProjectImgs();
+			getProjectYears();
 		}
 	}, [projects]);
 
-	useEffect(() => {
-		if (projectImgs.length) {
-			projects.map((project, index) => {
-				project.img = projectImgs[index];
-			});
-		}
-	}, [projectImgs]);
-
 	return (
 		<Section>
-			<h2>Featured works</h2>
+			{projectImgs.length ? (
+				<>
+					<h2>Featured works</h2>
+					{projects.map((project, index) => (
+						<a href={project.link} key={project.link} target="_blank">
+							<Card className="card" elevation={0}>
+								<CardContent className="card__content">
+									<CardMedia
+										className="card__media"
+										component="img"
+										image={projectImgs[index]}
+										alt={project.repo.replace("-", " ")}
+									/>
 
-			<Card className="card" elevation={0}>
-				<CardContent className="card__content">
-					<CardMedia
-						className="card__media"
-						component="img"
-						// height="230"
-						image="https://image.shutterstock.com/shutterstock/photos/1222098511/display_1500/stock-vector-infographic-dashboard-template-simple-green-blue-design-of-interface-admin-panel-with-graphs-1222098511.jpg"
-						alt="Paella dish"
-					/>
+									<div className="card__details">
+										<h1 className="card__title">
+											{project.repo.replace("-", " ")}
+										</h1>
 
-					<div className="card__details">
-						<h1 className="card__title">Designing Dashboards</h1>
+										<div className="card__tags">
+											<Chip
+												className="card__chip"
+												label={getProjectYear(project.repo)}
+											/>
+										</div>
 
-						<div className="card__tags">
-							<Chip label="2020" className="card__chip" />
-						</div>
-
-						<p className="card__desc">
-							Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-							amet sint. Velit officia consequat duis enim velit mollit.
-							Exercitation veniam consequat sunt nostrud amet.
-						</p>
-					</div>
-				</CardContent>
-			</Card>
+										<p className="card__desc">{project.description}</p>
+									</div>
+								</CardContent>
+							</Card>
+						</a>
+					))}
+				</>
+			) : null}
 		</Section>
 	);
 };

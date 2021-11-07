@@ -20,6 +20,7 @@ export const Section = styled.section`
 		padding: 0 0 1.7rem;
 		border-radius: 0;
 		border-bottom: 0.1rem solid #e0e0e0;
+		margin: 0 0 3rem;
 
 		&:hover {
 			cursor: pointer;
@@ -73,9 +74,11 @@ export const Section = styled.section`
 		}
 
 		.card {
+			margin: 0 0 3rem;
+
 			.card__content {
 				display: grid;
-				grid-template-columns: auto auto;
+				grid-template-columns: auto 1fr;
 				column-gap: 1.8rem;
 				margin: 0 auto;
 				padding: 0;
@@ -84,13 +87,16 @@ export const Section = styled.section`
 
 				.card__media {
 					margin: 0;
+					width: 24.6rem;
 					height: 18rem;
+					border: 0.1rem solid #e0e0e0;
 				}
 
 				.card__details {
 					.card__title {
 						font-size: 30px;
 						line-height: 44px;
+						text-transform: capitalize;
 					}
 				}
 			}
