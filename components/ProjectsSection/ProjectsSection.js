@@ -97,7 +97,12 @@ const ProjectsSection = () => {
 				<>
 					<h2>Featured works</h2>
 					{projects.map((project, index) => (
-						<a href={project.link} key={project.link} target="_blank">
+						<a
+							href={project.link}
+							key={project.link}
+							target="_blank"
+							rel="noreferrer"
+						>
 							<Card className="card" elevation={0}>
 								<CardContent className="card__content">
 									<CardMedia
