@@ -12,7 +12,6 @@ const getProjImgs = async (req, res) => {
 			img: projectImg,
 		});
 	} catch (error) {
-		console.log("getProjImgs error>>>", error);
 		res.status(400).json({
 			error: error,
 		});

@@ -19,7 +19,7 @@ const ProjectsSection = () => {
 			);
 			setProjects(gitResponse.data);
 		} catch (error) {
-			console.log("error>>>", error);
+			// console.log("error>>>", error);
 		}
 	};
 
@@ -35,7 +35,7 @@ const ProjectsSection = () => {
 			);
 			setProjectImgs(res);
 		} catch (error) {
-			console.log("error>>>", error);
+			// console.log("error>>>", error);
 		}
 	};
 
@@ -62,21 +62,19 @@ const ProjectsSection = () => {
 
 			setProjectYears(projectYearsArr);
 		} catch (error) {
-			console.log("error>>>", error);
+			// console.log("error>>>", error);
 		}
 	};
 
 	const getProjectYear = (projectName) => {
 		if (projectName && projectYears.length) {
-			let a = "";
+			let result = "";
 			projectYears.forEach((projectYear) => {
 				if (projectYear.name === projectName) {
-					console.log("projectYear.name>>>", projectYear.name);
-					console.log("projectName>>>", projectName);
-					a = projectYear.createdYear;
+					result = projectYear.createdYear;
 				}
 			});
-			return a;
+			return result;
 		}
 	};
 
