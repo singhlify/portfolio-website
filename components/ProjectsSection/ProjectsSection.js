@@ -24,11 +24,12 @@ const ProjectsSection = () => {
 	};
 
 	const getProjectImgs = async () => {
+		const currentURL = window.location.href;
 		try {
 			const res = await Promise.all(
 				projects.map(async (project) => {
 					const response = await axios.get(
-						`http://localhost:3000/api/projects?projURL=${project.link}`
+						`${currentURL}api/projects?projURL=${project.link}`
 					);
 					return response.data.img;
 				})
