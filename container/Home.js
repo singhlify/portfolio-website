@@ -5,6 +5,7 @@ import IntroSection from "../components/IntroSection/IntroSection";
 import MainWrapper from "components/MainWrapper/MainWrapper";
 import PostsSection from "@/components/PostsSection/PostsSection";
 import FooterSection from "@/components/FooterSection/FooterSection";
+import ProjectsSection from "@/components/ProjectsSection/ProjectsSection";
 
 const Home = () => {
 	return (
@@ -26,6 +27,8 @@ const Home = () => {
 
 			<IntroSection />
 			{/* <PostsSection /> */}
+
+			<ProjectsSection />
 
 			<FooterSection />
 		</>

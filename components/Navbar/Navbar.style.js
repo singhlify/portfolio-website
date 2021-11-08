@@ -21,7 +21,7 @@ export const NavMobLinks = styled.div`
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: #ff6464;
+	background: ${(props) => props.theme.colors.primary};
 	clip-path: circle(2.4rem at calc(100% - 3.5rem) 3.5rem);
 	transition: all 0.3s ease-in-out;
 	z-index: 1;

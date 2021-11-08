@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-	background: #edf7fa;
+	background: ${(props) => props.theme.colors.blue};
 	margin: 5.8rem 0;
 
 	h2 {

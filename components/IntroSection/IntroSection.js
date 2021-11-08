@@ -15,7 +15,7 @@ const IntroSection = () => {
 	return (
 		<Section>
 			<IntroImg>
-				<Image src={IntroSecImg} alt="Dev Working" />
+				<Image src={IntroSecImg} alt="Dev Working" placeholder="blur" />
 			</IntroImg>
 			<IntroText>
 				<h1>
