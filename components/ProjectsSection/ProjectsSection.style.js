@@ -19,7 +19,7 @@ export const Section = styled.section`
 		font-size: 1.6rem !important;
 		padding: 0 0 1.7rem;
 		border-radius: 0;
-		border-bottom: 0.1rem solid #e0e0e0;
+		border-bottom: 0.1rem solid ${(props) => props.theme.colors.grey};
 		margin: 0 0 3rem;
 
 		&:hover {
@@ -33,6 +33,7 @@ export const Section = styled.section`
 				border-radius: 0.6rem;
 				margin-bottom: 1.7rem;
 				height: 23rem;
+				border: 0.1rem solid ${(props) => props.theme.colors.grey};
 			}
 
 			.card__details {
@@ -89,7 +90,6 @@ export const Section = styled.section`
 					margin: 0;
 					width: 24.6rem;
 					height: 18rem;
-					border: 0.1rem solid #e0e0e0;
 				}
 
 				.card__details {

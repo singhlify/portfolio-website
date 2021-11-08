@@ -3,13 +3,11 @@ import axios from "axios";
 import { Section } from "./ProjectsSection.style";
 
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Chip from "@mui/material/Chip";
 import CardMedia from "@mui/material/CardMedia";
 
 const ProjectsSection = () => {
-	// https://api.github.com/users/blink98/repos
 	const [projects, setProjects] = useState([]);
 	const [projectImgs, setProjectImgs] = useState([]);
 	const [projectYears, setProjectYears] = useState([]);

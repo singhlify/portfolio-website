@@ -17,7 +17,7 @@ export const Footer = styled.footer`
 
 			&:hover {
 				color: ${(props) => props.theme.colors.primary};
-				transform: scale(1.1);
+				transform: scale(1.2);
 				cursor: pointer;
 			}
 		}

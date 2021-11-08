@@ -10,6 +10,8 @@ export default {
 		light: "#8695A4",
 		white: "#ffffff",
 		black: "#000000",
+		grey: "#e0e0e0",
+		blue: "#edf7fa",
 	},
 	breakpoints: {
 		sm: "only screen and (min-width: 576px)",
