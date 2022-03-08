@@ -12,9 +12,7 @@ const ProjectsSection = () => {
 
 	const getProjects = async () => {
 		try {
-			const { data } = await axios.get(
-				`${process.env.NEXT_PUBLIC_URL}/api/projects`
-			);
+			const { data } = await axios.get(`${window.location.href}api/projects`);
 			setProjects(data);
 		} catch (error) {
 			// console.log("error>>>", error);
