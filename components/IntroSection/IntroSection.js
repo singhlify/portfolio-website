@@ -39,7 +39,7 @@ const IntroSection = () => {
 						variant="contained"
 						disableElevation
 					>
-						Download Resume
+						View Resume
 					</CustomButton>
 				</div>
 			</IntroText>
