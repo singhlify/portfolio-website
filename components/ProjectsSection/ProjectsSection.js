@@ -27,41 +27,43 @@ const ProjectsSection = () => {
 
 	return (
 		<Section>
-			<>
-				<h2>Featured works</h2>
-				{projects.map((project) => (
-					<a
-						href={project.url}
-						key={project.url}
-						target="_blank"
-						rel="noreferrer"
-					>
-						<Card className="card" elevation={0}>
-							<CardContent className="card__content">
-								<CardMedia
-									className="card__media"
-									component="img"
-									image={project.image}
-									alt={project.name}
-								/>
+			{projects.length > 0 ? (
+				<>
+					<h2>Featured works</h2>
+					{projects.map((project) => (
+						<a
+							href={project.url}
+							key={project.url}
+							target="_blank"
+							rel="noreferrer"
+						>
+							<Card className="card" elevation={0}>
+								<CardContent className="card__content">
+									<CardMedia
+										className="card__media"
+										component="img"
+										image={project.image}
+										alt={project.name}
+									/>
 
-								<div className="card__details">
-									<h1 className="card__title">{project.name}</h1>
+									<div className="card__details">
+										<h1 className="card__title">{project.name}</h1>
 
-									<div className="card__tags">
-										<Chip
-											className="card__chip"
-											label={project.ghApiData.created_at.slice(0, 4)}
-										/>
+										<div className="card__tags">
+											<Chip
+												className="card__chip"
+												label={project.ghApiData.created_at.slice(0, 4)}
+											/>
+										</div>
+
+										<p className="card__desc">{project.description}</p>
 									</div>
-
-									<p className="card__desc">{project.description}</p>
-								</div>
-							</CardContent>
-						</Card>
-					</a>
-				))}
-			</>
+								</CardContent>
+							</Card>
+						</a>
+					))}
+				</>
+			) : null}
 		</Section>
 	);
 };
