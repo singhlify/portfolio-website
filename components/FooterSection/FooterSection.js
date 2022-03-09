@@ -1,6 +1,6 @@
 import { Alert, Snackbar } from "@mui/material";
 import React, { useState } from "react";
-import { Footer } from "./FooterSection.style";
+import { Footer, Tooltip } from "./FooterSection.style";
 
 const FooterSection = () => {
 	const [open, setOpen] = useState(false);
@@ -26,23 +26,33 @@ const FooterSection = () => {
 	return (
 		<Footer>
 			<div className="socialIcons">
-				<a href="https://github.com/Blink98" target="_blank" rel="noreferrer">
+				<a href="https://github.com/singhlify" target="_blank" rel="noreferrer">
 					<i className="fab fa-github"></i>
 				</a>
 				<a
-					href="https://www.linkedin.com/in/gsingh5k/"
+					href="https://www.linkedin.com/in/singhlify/"
 					target="_blank"
 					rel="noreferrer"
 				>
 					<i className="fab fa-linkedin"></i>
 				</a>
-				<a href="https://twitter.com/gsingh5k" target="_blank" rel="noreferrer">
+				<a
+					href="https://twitter.com/singhlify"
+					target="_blank"
+					rel="noreferrer"
+				>
 					<i className="fab fa-twitter"></i>
 				</a>
 
-				<i onClick={copyEmail} className="fas fa-envelope"></i>
+				<Tooltip title="Click to Copy" placement="top">
+					<i onClick={copyEmail} className="fas fa-envelope"></i>
+				</Tooltip>
 
-				<a href="https://dribbble.com/blink99" target="_blank" rel="noreferrer">
+				<a
+					href="https://dribbble.com/Singhlify"
+					target="_blank"
+					rel="noreferrer"
+				>
 					<i className="fab fa-dribbble"></i>
 				</a>
 			</div>

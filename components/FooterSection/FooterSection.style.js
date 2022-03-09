@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { withStyles } from "@mui/styles";
+import { Tooltip as muiTooltip } from "@mui/material";
 
 export const Footer = styled.footer`
 	padding: 5.3rem 1rem;
@@ -38,3 +40,9 @@ export const Footer = styled.footer`
 		letter-spacing: 0.01071em;
 	}
 `;
+
+export const Tooltip = withStyles({
+	tooltip: {
+		fontSize: "1.4rem",
+	},
+})(muiTooltip);
