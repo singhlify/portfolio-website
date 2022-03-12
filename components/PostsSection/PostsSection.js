@@ -18,7 +18,13 @@ const PostsSection = () => {
 				<>
 					<h2>
 						Recent posts
-						<a href="https://singhlify.hashnode.dev/">View all</a>
+						<a
+							href="https://singhlify.hashnode.dev/"
+							target="_blank"
+							rel="noreferrer"
+						>
+							View all
+						</a>
 					</h2>
 					<div className="cards">
 						{posts.slice(0, 2).map((post) => (
