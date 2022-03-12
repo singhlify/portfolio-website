@@ -9,7 +9,7 @@ export default function RootPage({ posts }) {
 
 	useEffect(() => {
 		dispatch(getPosts(posts));
-	}, []);
+	}, [posts]);
 
 	return (
 		<>
