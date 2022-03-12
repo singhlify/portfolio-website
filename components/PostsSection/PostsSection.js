@@ -26,6 +26,7 @@ const PostsSection = () => {
 								<a
 									href={`https://singhlify.hashnode.dev/${post.slug}`}
 									target="_blank"
+									rel="noreferrer"
 								>
 									<CardContent className="card__content">
 										<h1 className="card__title">{post.title}</h1>
