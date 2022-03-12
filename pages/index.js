@@ -46,5 +46,6 @@ export async function getStaticProps(context) {
 		props: {
 			posts: data.user.publication.posts,
 		},
+		revalidate: 604800,
 	};
 }
