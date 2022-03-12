@@ -22,11 +22,11 @@ const Home = () => {
 
 			<Navbar />
 
-			{/* <MainWrapper>
-			</MainWrapper> */}
+			{/* <MainWrapper /> */}
 
 			<IntroSection />
-			{/* <PostsSection /> */}
+
+			<PostsSection />
 
 			<ProjectsSection />
 
