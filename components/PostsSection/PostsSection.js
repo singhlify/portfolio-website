@@ -22,9 +22,8 @@ const PostsSection = () => {
 					</h2>
 					<div className="cards">
 						{posts.slice(0, 2).map((post) => (
-							<Card className="card" elevation={0}>
+							<Card key={post._id} className="card" elevation={0}>
 								<a
-									key={post._id}
 									href={`https://singhlify.hashnode.dev/${post.slug}`}
 									target="_blank"
 								>
