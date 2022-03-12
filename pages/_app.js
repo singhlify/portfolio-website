@@ -1,9 +1,13 @@
 import Theme from "../styles/theme";
+import { store } from "../store";
+import { Provider } from "react-redux";
 
 function MyApp({ Component, pageProps }) {
 	return (
 		<Theme>
-			<Component {...pageProps} />;
+			<Provider store={store}>
+				<Component {...pageProps} />;
+			</Provider>
 		</Theme>
 	);
 }
