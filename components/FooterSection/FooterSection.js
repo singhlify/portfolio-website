@@ -1,5 +1,5 @@
+import { useState } from "react";
 import { Alert, Snackbar } from "@mui/material";
-import React, { useState } from "react";
 import { Footer, Tooltip } from "./FooterSection.style";
 
 const FooterSection = () => {
@@ -15,9 +15,9 @@ const FooterSection = () => {
 		if (reason === "clickaway") {
 			return;
 		}
-
 		setOpen(false);
 	};
+
 	const copyEmail = () => {
 		navigator.clipboard.writeText("gs130899@gmail.com");
 		handleClick();
