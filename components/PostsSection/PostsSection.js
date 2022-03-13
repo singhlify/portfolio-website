@@ -13,7 +13,7 @@ const PostsSection = () => {
 	};
 
 	return posts.length > 0 ? (
-		<Wrapper>
+		<Wrapper id="blogs">
 			<Section>
 				<>
 					<h2>

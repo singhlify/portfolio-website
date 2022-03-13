@@ -24,7 +24,7 @@ const FooterSection = () => {
 	};
 
 	return (
-		<Footer>
+		<Footer id="contact">
 			<div className="socialIcons">
 				<a href="https://github.com/singhlify" target="_blank" rel="noreferrer">
 					<i className="fab fa-github"></i>
