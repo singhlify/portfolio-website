@@ -1,13 +1,37 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import axios from "axios";
 import Head from "next/head";
 import Navbar from "@/components/Navbar/Navbar";
 import IntroSection from "@/components/IntroSection/IntroSection";
-import MainWrapper from "components/MainWrapper/MainWrapper";
 import PostsSection from "@/components/PostsSection/PostsSection";
 import FooterSection from "@/components/FooterSection/FooterSection";
 import ProjectsSection from "@/components/ProjectsSection/ProjectsSection";
 
 const Home = () => {
+	const router = useRouter();
+
+	const [projects, setProjects] = useState([]);
+	const [isLoaded, setIsLoaded] = useState(true);
+
+	const getProjects = async () => {
+		setIsLoaded(false);
+		try {
+			const { data } = await axios.get(`${window.location.href}api/projects`);
+			setProjects(data);
+		} catch (error) {
+			console.log("error>>>", error);
+		}
+		setIsLoaded(true);
+	};
+
+	useEffect(() => {
+		if (window.location.hash.slice(0, 1) === "#") {
+			router.push("/");
+		}
+		getProjects();
+	}, []);
+
 	return (
 		<>
 			<Head>
@@ -22,13 +46,11 @@ const Home = () => {
 
 			<Navbar />
 
-			{/* <MainWrapper /> */}
-
 			<IntroSection />
 
 			<PostsSection />
 
-			<ProjectsSection />
+			<ProjectsSection projects={projects} isLoaded={isLoaded} />
 
 			<FooterSection />
 		</>

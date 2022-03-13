@@ -1,12 +1,9 @@
 import styled from "styled-components";
-import Button from "@mui/material/Button";
 
 export const Section = styled.section`
-	${"" /* margin: 3.7rem auto 5.8rem; */}
 	margin: 2rem auto 5.8rem;
 	padding: 0 clamp(1.8rem, 2.5vw, 3rem);
 	max-width: 38rem;
-	${"" /* margin: auto; */}
 
 	h2 {
 		text-align: center;
@@ -65,6 +62,24 @@ export const Section = styled.section`
 		}
 	}
 
+	.skeletons {
+		display: grid;
+		grid-template-rows: auto;
+		gap: 3rem;
+
+		.skeleton__container {
+			display: grid;
+			grid-template-rows: 1.5fr 0.5fr;
+			gap: 2rem;
+
+			.skeleton {
+				width: 100%;
+				height: 100%;
+				border-radius: 0.8rem;
+			}
+		}
+	}
+
 	@media ${(props) => props.theme.breakpoints.md} {
 		max-width: 90rem;
 
@@ -99,6 +114,13 @@ export const Section = styled.section`
 						text-transform: capitalize;
 					}
 				}
+			}
+		}
+
+		.skeletons {
+			.skeleton__container {
+				grid-template-columns: 0.5fr 1.5fr;
+				grid-template-rows: unset;
 			}
 		}
 	}

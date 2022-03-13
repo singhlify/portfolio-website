@@ -3,7 +3,8 @@ export default {
 		main: "Heebo, sans-serif",
 	},
 	colors: {
-		primary: "#FF6464",
+		old_primary: "#FF6464",
+		primary: "#009B9B",
 		secondary: "#00A8CC",
 		dark: "#21243D",
 		dark2: "#142850",

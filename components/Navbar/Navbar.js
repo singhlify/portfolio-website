@@ -1,49 +1,39 @@
 import React from "react";
-import {
-	NavCheckBox,
-	MenuBtn,
-	NavContainer,
-	NavLogo,
-	NavDeskLinks,
-	NavMobLinks,
-} from "./Navbar.style";
+import Link from "next/link";
+import { Wrapper, NavDesk, NavCheckBox, MenuBtn, NavMob } from "./Navbar.style";
 
 const Navbar = () => {
 	return (
 		<>
-			{/* <NavContainer>
-				<NavLogo>Gurjot Singh</NavLogo>
+			<Wrapper>
+				<NavDesk>
+					<div className="nav__links">
+						<Link href="#blogs">Blogs</Link>
+						<Link href="#projects">Projects</Link>
+						<Link href="#contact">Contact</Link>
+					</div>
+				</NavDesk>
+			</Wrapper>
 
-				<NavDeskLinks></NavDeskLinks>
-			</NavContainer> */}
+			<NavCheckBox type="checkbox" id="active" />
 
-			<div style={{ height: "5rem" }}></div>
-
-			{/* <NavCheckBox type="checkbox" id="active" /> */}
-
-			{/* <MenuBtn htmlFor="active">
+			<MenuBtn htmlFor="active">
 				<i className="fas fa-bars"></i>
-			</MenuBtn> */}
+			</MenuBtn>
 
-			{/* <NavMobLinks>
+			<NavMob>
 				<ul>
 					<li>
-						<a href="#">Home</a>
+						<Link href="#blogs">Blogs</Link>
 					</li>
 					<li>
-						<a href="#">About</a>
+						<Link href="#projects">Projects</Link>
 					</li>
 					<li>
-						<a href="#">Services</a>
-					</li>
-					<li>
-						<a href="#">Gallery</a>
-					</li>
-					<li>
-						<a href="#">Feedback</a>
+						<Link href="#contact">Contact</Link>
 					</li>
 				</ul>
-			</NavMobLinks> */}
+			</NavMob>
 		</>
 	);
 };

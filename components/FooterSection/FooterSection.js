@@ -1,5 +1,5 @@
+import { useState } from "react";
 import { Alert, Snackbar } from "@mui/material";
-import React, { useState } from "react";
 import { Footer, Tooltip } from "./FooterSection.style";
 
 const FooterSection = () => {
@@ -15,16 +15,16 @@ const FooterSection = () => {
 		if (reason === "clickaway") {
 			return;
 		}
-
 		setOpen(false);
 	};
+
 	const copyEmail = () => {
 		navigator.clipboard.writeText("gs130899@gmail.com");
 		handleClick();
 	};
 
 	return (
-		<Footer>
+		<Footer id="contact">
 			<div className="socialIcons">
 				<a href="https://github.com/singhlify" target="_blank" rel="noreferrer">
 					<i className="fab fa-github"></i>
