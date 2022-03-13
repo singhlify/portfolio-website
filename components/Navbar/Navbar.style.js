@@ -1,21 +1,36 @@
 import styled from "styled-components";
 
-export const NavContainer = styled.div`
-	font-size: 1.6rem;
-	padding: 2rem 1rem;
-
-	position: sticky;
-	top: 0;
+export const Wrapper = styled.div`
+	height: fit-content;
+	padding: 2.7rem clamp(1.8rem, 2.5vw, 3rem);
 `;
 
-export const NavLogo = styled.div`
-	font-family: inherit;
-	font-size: clamp(2.4rem, 3vw, 4rem);
+export const NavDesk = styled.nav`
+	display: none;
+
+	@media ${(props) => props.theme.breakpoints.sm} {
+		display: block;
+		max-width: 98.1rem;
+		margin: auto;
+
+		.nav__links {
+			width: fit-content;
+			margin-left: auto;
+
+			a {
+				text-decoration: none;
+				font-weight: 500;
+				font-size: 2rem;
+				line-height: 2.9rem;
+				text-align: right;
+
+				margin-left: 3.3rem;
+			}
+		}
+	}
 `;
 
-export const NavDeskLinks = styled.div``;
-
-export const NavMobLinks = styled.div`
+export const NavMob = styled.div`
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -71,6 +86,10 @@ export const NavMobLinks = styled.div`
 			}
 		}
 	}
+
+	@media ${(props) => props.theme.breakpoints.sm} {
+		display: none;
+	}
 `;
 
 export const MenuBtn = styled.label`
@@ -86,7 +105,7 @@ export const MenuBtn = styled.label`
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
 
-	position: sticky;
+	position: fixed;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -94,14 +113,19 @@ export const MenuBtn = styled.label`
 
 	background: ${(props) => props.theme.colors.white};
 	color: ${(props) => props.theme.colors.black};
+
+	@media ${(props) => props.theme.breakpoints.sm} {
+		display: none;
+	}
 `;
 
 export const NavCheckBox = styled.input.attrs((props) => {
 	type: "checkbox";
 })`
 	display: none;
+	position: fixed;
 
-	&:checked ~ ${NavMobLinks} {
+	&:checked ~ ${NavMob} {
 		clip-path: circle(75%);
 	}
 
@@ -112,5 +136,9 @@ export const NavCheckBox = styled.input.attrs((props) => {
 		i:before {
 			content: "\f00d";
 		}
+	}
+
+	@media ${(props) => props.theme.breakpoints.sm} {
+		display: none;
 	}
 `;
