@@ -8,8 +8,8 @@ const Navbar = () => {
 			<Wrapper>
 				<NavDesk>
 					<div className="nav__links">
-						<Link href="#projects">Work</Link>
 						<Link href="#blogs">Blogs</Link>
+						<Link href="#projects">Projects</Link>
 						<Link href="#contact">Contact</Link>
 					</div>
 				</NavDesk>
@@ -24,10 +24,10 @@ const Navbar = () => {
 			<NavMob>
 				<ul>
 					<li>
-						<Link href="#projects">Works</Link>
+						<Link href="#blogs">Blogs</Link>
 					</li>
 					<li>
-						<Link href="#blogs">Blogs</Link>
+						<Link href="#projects">Projects</Link>
 					</li>
 					<li>
 						<Link href="#contact">Contact</Link>
