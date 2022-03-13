@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Wrapper, NavDesk, NavCheckBox, MenuBtn, NavMob } from "./Navbar.style";
 
 const Navbar = () => {
@@ -7,9 +8,9 @@ const Navbar = () => {
 			<Wrapper>
 				<NavDesk>
 					<div className="nav__links">
-						<a href="">Works</a>
-						<a href="">Blogs</a>
-						<a href="">Contact</a>
+						<Link href="#projects">Work</Link>
+						<Link href="#blogs">Blogs</Link>
+						<Link href="#contact">Contact</Link>
 					</div>
 				</NavDesk>
 			</Wrapper>
@@ -23,13 +24,13 @@ const Navbar = () => {
 			<NavMob>
 				<ul>
 					<li>
-						<a href="#">Works</a>
+						<Link href="#projects">Works</Link>
 					</li>
 					<li>
-						<a href="#">Blogs</a>
+						<Link href="#blogs">Blogs</Link>
 					</li>
 					<li>
-						<a href="#">Contact</a>
+						<Link href="#contact">Contact</Link>
 					</li>
 				</ul>
 			</NavMob>
