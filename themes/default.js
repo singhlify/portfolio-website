@@ -1,18 +1,58 @@
-export default {
+const light = {
+	colors: {
+		bg: {
+			body: "#ffffff",
+			card: "#ffffff",
+			card_section: "#EDF7FA",
+			button: "#009b9b",
+			nav: "#009b9b",
+		},
+		text: {
+			global: "#21243D",
+			nav: "#21243D",
+			intro: "#21243D",
+			post: "#21243D",
+			project: "#21243D",
+			project_secondary: "8695A4",
+			footer: "#21243D",
+			link: "#00A8CC",
+			button: "#ffffff",
+		},
+		border: "#E0E0E0",
+	},
+};
+
+const dark = {
+	colors: {
+		bg: {
+			body: "#022C43",
+			// card: "#022C43",
+			card: "#115173",
+			card_section: "#053F5E",
+			button: "#FFD700",
+			chip: "#ffffff",
+			nav: "#FFD700",
+		},
+		text: {
+			global: "#ffffff",
+			nav: "#ffffff",
+			nav_link: "#022C43",
+			intro: "#ffffff",
+			post: "#ffffff",
+			project: "#ffffff",
+			project_secondary: "#8695A4",
+			footer: "#ffffff",
+			link: "#00A8CC",
+			button: "#000000",
+			chip: "#022C43",
+		},
+		border: "#E0E0E0",
+	},
+};
+
+const defaultTheme = {
 	fonts: {
 		main: "Heebo, sans-serif",
-	},
-	colors: {
-		old_primary: "#FF6464",
-		primary: "#009B9B",
-		secondary: "#00A8CC",
-		dark: "#21243D",
-		dark2: "#142850",
-		light: "#8695A4",
-		white: "#ffffff",
-		black: "#000000",
-		grey: "#e0e0e0",
-		blue: "#edf7fa",
 	},
 	breakpoints: {
 		sm: "only screen and (min-width: 576px)",
@@ -21,3 +61,6 @@ export default {
 		xl: "only screen and (min-width: 1200px)",
 	},
 };
+
+export const lightTheme = { ...defaultTheme, ...light };
+export const darkTheme = { ...defaultTheme, ...dark };

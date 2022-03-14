@@ -28,14 +28,14 @@ export const CustomButton = styled(Button)`
 	font-size: 2rem !important;
 	font-weight: 500 !important;
 	text-transform: capitalize !important;
-	color: ${(props) => props.theme.colors.white} !important;
+	color: ${(props) => props.theme.colors.text.button} !important;
 	margin: auto !important;
 	padding: 1rem 2rem !important;
 	border-radius: 0.2rem !important;
-	background: ${(props) => props.theme.colors.primary} !important;
+	background: ${(props) => props.theme.colors.bg.button} !important;
 
 	&:hover {
-		background: ${(props) => props.theme.colors.primary} !important;
+		background: ${(props) => props.theme.colors.bg.button} !important;
 	}
 
 	@media ${(props) => props.theme.breakpoints.md} {

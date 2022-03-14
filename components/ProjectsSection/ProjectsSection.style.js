@@ -15,9 +15,11 @@ export const Section = styled.section`
 	.card {
 		font-size: 1.6rem !important;
 		padding: 0 0 1.7rem;
-		border-radius: 0;
-		border-bottom: 0.1rem solid ${(props) => props.theme.colors.grey};
 		margin: 0 0 3rem;
+		border-radius: 0;
+		border-bottom: 0.1rem solid ${(props) => props.theme.colors.border};
+		background: ${(props) => props.theme.colors.bg.body};
+		color: ${(props) => props.theme.colors.text.post};
 
 		&:hover {
 			cursor: pointer;
@@ -30,7 +32,7 @@ export const Section = styled.section`
 				border-radius: 0.6rem;
 				margin-bottom: 1.7rem;
 				height: 23rem;
-				border: 0.1rem solid ${(props) => props.theme.colors.grey};
+				border: 0.1rem solid ${(props) => props.theme.colors.border};
 			}
 
 			.card__details {
@@ -44,8 +46,8 @@ export const Section = styled.section`
 					margin: 1.6rem 0 2.4rem;
 
 					.card__chip {
-						background: ${(props) => props.theme.colors.dark2};
-						color: ${(props) => props.theme.colors.white};
+						background: ${(props) => props.theme.colors.bg.chip};
+						color: ${(props) => props.theme.colors.text.chip};
 						border-radius: 1.6rem;
 						font-weight: 900;
 						font-size: 1.6rem;

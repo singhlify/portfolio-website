@@ -5,29 +5,18 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    ${"" /* font-size: inherit; */}
   }
   
   html {
     scroll-behavior: smooth;
     font-size: 62.5%;
-    
-    ${
-			"" /* @media ${(props) => props.theme.md} {
-		  font-size: 56.25%;
-    }
-
-    @media ${(props) => props.theme.sm} {
-		  font-size: 50%;
-    } */
-		}
   }
   
   body {
     font-size: 1.6rem;
     font-family: ${(props) => props.theme.fonts.main};
-    background: ${(props) => props.theme.colors.white};
-    color: ${(props) => props.theme.colors.dark};
+    background: ${(props) => props.theme.colors.bg.body};
+    color: ${(props) => props.theme.colors.text.global};
     cursor: default;
   }
   

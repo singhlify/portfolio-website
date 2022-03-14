@@ -18,7 +18,7 @@ export const Footer = styled.footer`
 			transition: all 0.3s ease-in-out;
 
 			&:hover {
-				color: ${(props) => props.theme.colors.primary};
+				color: ${(props) => props.theme.colors.bg.button};
 				transform: scale(1.2);
 				cursor: pointer;
 			}

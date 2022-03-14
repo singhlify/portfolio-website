@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-	background: ${(props) => props.theme.colors.blue};
+	background: ${(props) => props.theme.colors.bg.card_section};
 	margin: 5.8rem 0;
 `;
 
@@ -11,7 +11,7 @@ export const Section = styled.section`
 	max-width: 38rem;
 
 	h2 {
-		color: ${(props) => props.theme.colors.dark};
+		color: ${(props) => props.theme.colors.text.post};
 		font-weight: normal;
 		font-size: 1.8rem;
 		line-height: 6rem;
@@ -28,7 +28,7 @@ export const Section = styled.section`
 			line-height: 2.4rem;
 			text-align: right;
 
-			color: ${(props) => props.theme.colors.secondary};
+			color: ${(props) => props.theme.colors.text.link};
 		}
 	}
 
@@ -41,6 +41,8 @@ export const Section = styled.section`
 	.card {
 		font-size: 1.6rem !important;
 		border-radius: 0.4rem;
+		background: ${(props) => props.theme.colors.bg.card};
+		color: ${(props) => props.theme.colors.text.post};
 
 		.card__content {
 			padding: 1.2rem 1.9rem 2.2rem;
