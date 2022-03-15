@@ -5,6 +5,7 @@ const light = {
 			card: "#ffffff",
 			card_section: "#EDF7FA",
 			button: "#009b9b",
+			chip: "#21243D",
 			nav: "#009b9b",
 		},
 		text: {
@@ -17,6 +18,7 @@ const light = {
 			footer: "#21243D",
 			link: "#00A8CC",
 			button: "#ffffff",
+			chip: "#ffffff",
 		},
 		border: "#E0E0E0",
 	},
@@ -26,7 +28,6 @@ const dark = {
 	colors: {
 		bg: {
 			body: "#022C43",
-			// card: "#022C43",
 			card: "#115173",
 			card_section: "#053F5E",
 			button: "#FFD700",
