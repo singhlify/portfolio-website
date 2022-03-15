@@ -36,7 +36,7 @@ export const NavMob = styled.div`
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: ${(props) => props.theme.colors.primary};
+	background: ${(props) => props.theme.colors.bg.nav};
 	clip-path: circle(2.4rem at calc(100% - 3.5rem) 3.5rem);
 	transition: all 0.3s ease-in-out;
 	z-index: 1;
@@ -61,12 +61,12 @@ export const NavMob = styled.div`
 				position: relative;
 				line-height: 5rem;
 				transition: all 0.3s ease;
-				color: ${(props) => props.theme.colors.white};
+				color: ${(props) => props.theme.colors.text.nav_link};
 
 				&:after {
 					position: absolute;
 					content: "";
-					background: ${(props) => props.theme.colors.white};
+					background: ${(props) => props.theme.colors.text.nav_link};
 					width: 100%;
 					height: 5rem;
 					left: 0;
@@ -81,7 +81,7 @@ export const NavMob = styled.div`
 				}
 
 				&:hover {
-					color: ${(props) => props.theme.colors.dark};
+					color: ${(props) => props.theme.colors.text.nav};
 				}
 			}
 		}
@@ -111,8 +111,8 @@ export const MenuBtn = styled.label`
 	align-items: center;
 	margin-left: auto;
 
-	background: ${(props) => props.theme.colors.white};
-	color: ${(props) => props.theme.colors.black};
+	background: ${(props) => props.theme.colors.bg.body};
+	color: ${(props) => props.theme.colors.text.nav};
 
 	@media ${(props) => props.theme.breakpoints.sm} {
 		display: none;
