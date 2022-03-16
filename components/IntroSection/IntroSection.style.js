@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Button from "@mui/material/Button";
 
 export const Section = styled.section`
-	${"" /* margin: 3.7rem auto 5.8rem; */}
 	margin: 2rem auto 5.8rem;
 	padding: clamp(1.8rem, 2.5vw, 3rem);
 
@@ -13,7 +12,6 @@ export const Section = styled.section`
 	@media ${(props) => props.theme.breakpoints.md} {
 		margin: 19.4rem auto 7.1rem;
 		margin: 7.1rem auto;
-		${"" /* max-width: 86.3rem; */}
 		max-width: 90rem;
 		display: grid;
 		grid-template-columns: auto auto;
@@ -44,12 +42,10 @@ export const CustomButton = styled(Button)`
 `;
 
 export const IntroImg = styled.div`
-	${"" /* max-width: 16.6rem; */}
 	max-width: 20rem;
 	margin: 0 auto 3.6rem;
 
 	@media ${(props) => props.theme.breakpoints.md} {
-		${"" /* max-width: 26rem; */}
 		max-width: 31rem;
 		margin: 0 0 0 auto;
 	}

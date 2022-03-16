@@ -100,8 +100,6 @@ export const Section = styled.section`
 				column-gap: 1.8rem;
 				margin: 0 auto;
 				padding: 0;
-				${"" /* margin: 19.4rem auto 7.1rem; */}
-				${"" /* margin: 7.1rem auto; */}
 
 				.card__media {
 					margin: 0;
