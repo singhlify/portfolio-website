@@ -1,19 +1,85 @@
 import styled from "styled-components";
+import { Switch as muiSwitch } from "@mui/material";
 
 export const Wrapper = styled.div`
 	height: fit-content;
-	padding: 2.7rem clamp(1.8rem, 2.5vw, 3rem);
+	padding: 2rem clamp(1.8rem, 2.5vw, 3rem);
+
+	@media ${(props) => props.theme.breakpoints.sm} {
+		padding: 2.7rem clamp(1.8rem, 2.5vw, 3rem);
+	}
+`;
+
+export const Switch = styled(muiSwitch)`
+	width: 6.2rem;
+	height: 3.4rem;
+	padding: 0.7rem;
+	margin-right: auto;
+
+	& .MuiSwitch-switchBase {
+		margin: 0.1rem;
+		padding: 0;
+		transform: translateX(0.6rem);
+
+		&.Mui-checked {
+			color: ${(props) => props.theme.colors.text.switch_icon};
+			transform: translateX(2.2rem);
+
+			& .MuiSwitch-thumb:before {
+				/* moon */
+				content: "\f186";
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				font-size: 2.1rem;
+			}
+
+			& + .MuiSwitch-track {
+				opacity: 1;
+				background-color: ${(props) => props.theme.colors.bg.switch_track};
+			}
+		}
+	}
+
+	& .MuiSwitch-thumb {
+		background-color: ${(props) => props.theme.colors.bg.switch_thumb};
+		width: 3.2rem;
+		height: 3.2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:before {
+			/* sun */
+			content: "\f185";
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			font-size: 2.1rem;
+			color: ${(props) => props.theme.colors.text.switch_icon};
+		}
+	}
+
+	& .MuiSwitch-track {
+		opacity: 1;
+		background-color: ${(props) => props.theme.colors.bg.switch_track};
+		border-radius: 2rem;
+	}
 `;
 
 export const NavDesk = styled.nav`
-	display: none;
+	display: flex;
+	align-items: center;
+
+	.nav__links {
+		display: none;
+	}
 
 	@media ${(props) => props.theme.breakpoints.sm} {
-		display: block;
 		max-width: 98.1rem;
 		margin: auto;
 
 		.nav__links {
+			display: unset;
+
 			width: fit-content;
 			margin-left: auto;
 
