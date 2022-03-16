@@ -1,6 +1,7 @@
 // https://brianlovin.com/writing/adding-dark-mode-with-next-js
 // https://codesandbox.io/s/mzj64x80ny?file=/src/styles.scss
 // https://www.joshwcomeau.com/react/dark-mode/
+// https://www.youtube.com/watch?v=kIkdoW6VUIQ
 
 import { useEffect, useState } from "react";
 import useDarkMode from "use-dark-mode";
