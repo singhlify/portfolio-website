@@ -2,9 +2,11 @@ import useDarkMode from "use-dark-mode";
 import Link from "next/link";
 import Switch from "@mui/material/Switch";
 import { Wrapper, NavDesk, NavCheckBox, MenuBtn, NavMob } from "./Navbar.style";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
-	const { value, toggle } = useDarkMode(true);
+	// const { value, toggle } = useDarkMode(true);
+	const { theme, setTheme } = useTheme();
 
 	return (
 		<>
@@ -13,7 +15,8 @@ const Navbar = () => {
 					<div className="nav__links">
 						<Switch
 							checked={value}
-							onChange={toggle}
+							// onChange={toggle}
+							onClick={() => setTheme("light")}
 							inputProps={{ "aria-label": "controlled" }}
 						/>
 						<Link href="#blogs">Blogs</Link>
