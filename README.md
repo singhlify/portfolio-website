@@ -1,39 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Singhlify Portfolio Website
 
-## Getting Started
+![Portfolio Website Hero Section](https://repository-images.githubusercontent.com/423933481/213057c5-156a-42f8-b2c8-1d13fc8d7bd6)
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
+I'm Gurjot Singh, a Full-Stack geek & developer. I have been developing Web Applications since the beginning of 2020. In my free time I write blogs on HashNode. You can find me everywhere @singhlify.
+
+## 🚀 Demo
+
+[https://singhlify.vercel.app/](https://singhlify.vercel.app/)
+
+## Project Screenshot:
+
+![Portfolio Website full page screenshot](https://cdn.hashnode.com/res/hashnode/image/upload/v1649601877922/f6bTnKNFy.png)
+  
+
+## 🧐 Features
+
+Here're some of the project's best features:
+
+* Statically Generated
+* Clean, Minimilistic, Modern and Responsive UI
+* Open Resume in new tab to view instead of downloading it
+* Check out the latest blogs at a glance
+* Best projects directly sourced from GitHub's pinned repos
+* Social Links for multiple channels of communication
+
+## 🛠️ Installation Steps:
+
+1. Clone the repo
+```
+git clone [url]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install the dependencies to the local node_modules folder
+```
+npm i
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+3. Run the app
+```
+npm run dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 🍰 Contribution Guidelines:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-# Commit Guidelines
+### Commit
 
 **Template-** :feature_emoji: [FEATURE CATEGORY] commit message
 
@@ -43,3 +54,20 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 :rainbow: `:rainbow: [STYLE]`  
 :memo: `:memo: [DOCS]`  
 :recycle: `:recycle: [REFACTOR]`
+  
+  
+## 💻 Built with
+
+Technologies used in the project:
+
+* NextJs
+* Material UI
+* Styled Components
+* Axios
+* Apollo Client
+* GraphQl
+* Redux
+
+## 🛡️ License:
+
+This project is licensed under the MIT License
