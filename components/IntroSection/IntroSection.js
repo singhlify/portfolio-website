@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import IntroSecImg from "assets/images/dev_working.png";
+import IntroSecImg from "public/dev_working.png";
 import {
 	CustomButton,
 	IntroImg,

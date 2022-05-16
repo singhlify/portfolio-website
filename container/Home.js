@@ -6,7 +6,9 @@ import IntroSection from "@/components/IntroSection/IntroSection";
 import PostsSection from "@/components/PostsSection/PostsSection";
 import FooterSection from "@/components/FooterSection/FooterSection";
 import ProjectsSection from "@/components/ProjectsSection/ProjectsSection";
-import logo from "@/assets/images/Singhlify.png"
+import logo from "@/public/Singhlify.png"
+import ogPreview from "@/public/og_preview.png"
+import twitterPreview from "@/public/twitter_preview.png"
 import MetaTags from "@/components/MicroComponents/MetaTags";
 
 // for meta tags
@@ -39,7 +41,7 @@ const Home = () => {
 
 	return (
 		<>			
-			<MetaTags title={title } description={description} img={logo.src}>
+			<MetaTags title={title } description={description} ogPreview={ogPreview.src} twitterPreview={twitterPreview.src} >
 				<meta name="author" content="Gurjot Singh" />
 				<meta name="keywords" content={keywords} />
 				<meta property="twitter:creator" content="@singhlify" />

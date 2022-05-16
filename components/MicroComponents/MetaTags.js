@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const MetaTags = ({ title, description, img, children = [] }) => {
+const MetaTags = ({ title, description, img, ogPreview, twitterPreview, children = [] }) => {
 	return (
 		<Head>
 			{/* HTML Meta Tags */}
@@ -12,19 +12,19 @@ const MetaTags = ({ title, description, img, children = [] }) => {
 			{/* Google / Search Engine Tags */}
 			<meta itemProp="name" content={title} />
 			<meta itemProp="description" content={description} />
-			<meta itemProp="image" content={img} />
+			<meta itemProp="image" content={ogPreview} />
 
 			{/* Facebook Meta Tags */}
 			<meta property="og:type" content="website" />
 			<meta property="og:title" content={title} />
 			<meta property="og:description" content={description} />
-			<meta property="og:image" content={img} />
+			<meta property="og:image" content={ogPreview} />
 
 			{/* Twitter Meta Tags */}
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta name="twitter:title" content={title} />
 			<meta name="twitter:description" content={description} />
-			<meta name="twitter:image" content={img} />
+			<meta name="twitter:image" content={twitterPreview} />
 		</Head>
 	);
 };

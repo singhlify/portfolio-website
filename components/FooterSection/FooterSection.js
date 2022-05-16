@@ -56,7 +56,12 @@ const FooterSection = () => {
 					<i className="fab fa-dribbble"></i>
 				</a>
 			</div>
-			<p>Handcrafted with ❤️</p>
+			<p>
+				Handcrafted with ❤️ & Designed by
+				<a href="https://www.figma.com/community/file/882879599442878081">
+					Tinjo Thomas
+				</a>
+			</p>
 
 			<Snackbar
 				anchorOrigin={{ vertical, horizontal }}
