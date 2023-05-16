@@ -7,7 +7,6 @@ import PostsSection from "@/components/PostsSection/PostsSection";
 import FooterSection from "@/components/FooterSection/FooterSection";
 import ProjectsSection from "@/components/ProjectsSection/ProjectsSection";
 import MetaTags from "@/components/MicroComponents/MetaTags";
-import { logo } from "assets";
 
 // for meta tags
 const title = "Gurjot Singh";
@@ -41,7 +40,7 @@ const Home = () => {
 
   return (
     <>
-      <MetaTags title={title} description={description} img={logo}>
+      <MetaTags title={title} description={description} img="./logo.png">
         <meta name="author" content="Gurjot Singh" />
         <meta name="keywords" content={keywords} />
         <meta property="twitter:creator" content="@singhlify" />
