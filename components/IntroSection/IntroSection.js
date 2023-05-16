@@ -15,7 +15,7 @@ const IntroSection = () => {
   return (
     <Section>
       <IntroImg>
-        <Image src={devWorking} alt="Dev Working" placeholder="blur" />
+        <Image priority src={devWorking} alt="Dev Working" placeholder="blur" />
       </IntroImg>
       <IntroText>
         <h1>
