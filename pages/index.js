@@ -5,46 +5,43 @@ import { useDispatch } from "react-redux";
 import { getPosts } from "../slices/posts";
 
 export default function RootPage({ posts }) {
-	const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-	useEffect(() => {
-		dispatch(getPosts(posts));
-	}, [posts]);
+  useEffect(() => {
+    dispatch(getPosts(posts));
+  }, [posts]);
 
-	return (
-		<>
-			<Home posts={posts} />
-		</>
-	);
+  return <Home posts={posts} />;
 }
 
 export async function getStaticProps(context) {
-	const client = new ApolloClient({
-		uri: "https://api.hashnode.com/",
-		cache: new InMemoryCache(),
-	});
+  const client = new ApolloClient({
+    uri: "https://api.hashnode.com/",
+    cache: new InMemoryCache(),
+  });
 
-	const { data } = await client.query({
-		query: gql`
-			query GetPosts {
-				user(username: "singhlify") {
-					publication {
-						posts(page: 0) {
-							_id
-							title
-							brief
-							slug
-							dateUpdated
-						}
-					}
-				}
-			}
-		`,
-	});
+  const { data } = await client.query({
+    query: gql`
+      query GetPosts {
+        user(username: "singhlify") {
+          publication {
+            posts(page: 0) {
+              _id
+              title
+              brief
+              slug
+              dateUpdated
+            }
+          }
+        }
+      }
+    `,
+  });
 
-	return {
-		props: {
-			posts: data.user.publication.posts,
-		},
-	};
+  return {
+    props: {
+      posts: data.user.publication.posts,
+    },
+    revalidate: 10,
+  };
 }

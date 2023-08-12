@@ -12,20 +12,23 @@ import { logo } from "assets";
 // for meta tags
 const title = "Gurjot Singh";
 const description =
-  "I'm Gurjot Singh, a Full-Stack geek & developer. I have been developing Web Apps since the beginning of 2020. In my free time I write blogs on HashNode. You can find me everywhere @singhlify.";
+  "I'm Gurjot Singh, a Full-Stack geek & developer. I have been developing Web Apps since the beginning of 2020. In my free time I write blogs on HashNode. You can find me everywhere @Singhlify.";
 const keywords =
   "frontend developer, backend developer, fullstack developer, web developer, react, mongodb, nodejs, express, nextjs, javascript";
 
 const Home = () => {
   const router = useRouter();
-  const [projects, setProjects] = useState([]);
   const [isLoaded, setIsLoaded] = useState(true);
+  const [pageContent, setPageContent] = useState({});
 
-  const getProjects = async () => {
+  const getHomepageContent = async () => {
     setIsLoaded(false);
     try {
-      const { data } = await axios.get(`${window.location.href}api/projects`);
-      setProjects(data);
+      const { data } = await axios.get(
+        `${window.location.href}api/homepageContent`
+      );
+      console.log("data>>>", data);
+      setPageContent(data?.homepage);
     } catch (error) {
       // console.log("error>>>", error);
     }
@@ -36,7 +39,7 @@ const Home = () => {
     if (window.location.hash.slice(0, 1) === "#") {
       router.push("/");
     }
-    getProjects();
+    getHomepageContent();
   }, []);
 
   return (
@@ -44,16 +47,20 @@ const Home = () => {
       <MetaTags title={title} description={description} img={logo?.src}>
         <meta name="author" content="Gurjot Singh" />
         <meta name="keywords" content={keywords} />
-        <meta property="twitter:creator" content="@singhlify" />
+        <meta property="twitter:creator" content="@Singhlify" />
       </MetaTags>
 
       <Navbar />
 
-      <IntroSection />
+      <IntroSection
+        resumeUrl={pageContent?.introduction?.resumeUrl}
+        introTitle={pageContent?.introduction?.title}
+        introDescription={pageContent?.introduction?.description}
+      />
 
-      <PostsSection />
+      <PostsSection posts={pageContent?.articles} />
 
-      <ProjectsSection projects={projects} isLoaded={isLoaded} />
+      <ProjectsSection projects={pageContent?.projects} isLoaded={isLoaded} />
 
       <FooterSection />
     </>
