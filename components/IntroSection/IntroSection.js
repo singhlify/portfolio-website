@@ -8,34 +8,30 @@ import {
   Section,
 } from "./IntroSection.style";
 
-const IntroSection = () => {
-  const resumeLink =
-    "https://drive.google.com/file/d/1_BI60ayYZZVCLhxPU2pvdc6HXjuyw7-V/view";
-
+const IntroSection = ({
+  resumeUrl = "",
+  introTitle = "",
+  introDescription = "",
+}) => {
   return (
     <Section>
       <IntroImg>
-        <Image priority src={devWorking} alt="Dev Working" placeholder="blur" />
+        <Image
+          priority
+          src={devWorking}
+          alt="Gurjot Singh"
+          placeholder="blur"
+        />
       </IntroImg>
       <IntroText>
-        <h1>
-          Hi, I am Gurjot,
-          <br />
-          Full-Stack
-          <br /> Developer
-        </h1>
+        <h1 dangerouslySetInnerHTML={{ __html: introTitle }} />
 
-        <p>
-          Meticulous web developer with hands-on experience and keenness for
-          responsive website design and a firm believer in the mobile-first
-          approach.
-        </p>
+        <p>{introDescription}</p>
 
         <div className="buttonContainer">
           <CustomButton
-            href={resumeLink}
+            href={resumeUrl}
             target="_blank"
-            rel="noreferrer"
             variant="contained"
             disableElevation
           >
