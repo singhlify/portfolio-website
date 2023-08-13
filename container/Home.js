@@ -27,7 +27,6 @@ const Home = () => {
       const { data } = await axios.get(
         `${window.location.href}api/homepageContent`
       );
-      console.log("data>>>", data);
       setPageContent(data?.homepage);
     } catch (error) {
       // console.log("error>>>", error);

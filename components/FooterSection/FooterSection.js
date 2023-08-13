@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Alert, Snackbar } from "@mui/material";
 import { Footer, Tooltip } from "./FooterSection.style";
+import Image from "next/image";
 
 const FooterSection = () => {
   const [open, setOpen] = useState(false);
@@ -56,6 +57,26 @@ const FooterSection = () => {
           <i className="fab fa-dribbble"></i>
         </a>
       </div>
+
+      <a
+        href="https://www.buymeacoffee.com/Singhlify"
+        target="_blank"
+        rel="noreferrer"
+        style={{
+          display: "flex",
+          margin: "2rem auto",
+          width: "fit-content",
+          height: "fit-content",
+        }}
+      >
+        <Image
+          src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+          alt="Buy Me A Coffee"
+          width={217}
+          height={60}
+        />
+      </a>
+
       <p>Handcrafted with ❤️</p>
 
       <p>
