@@ -11,11 +11,11 @@ import {
 import { logo } from "assets";
 
 // for meta tags
-const title = "Gurjot Singh | Full Stack Developer";
+const title = "Gurjot Singh (@Singhlify) | Full Stack Developer";
 const description =
   "I'm Gurjot Singh, a Full-Stack geek & developer. I have been developing Web Apps since 2020. In my free time I write blogs on HashNode. You can find me everywhere @Singhlify.";
 const keywords =
-  "frontend developer, backend developer, fullstack developer, web developer, typescript react, mongodb, nodejs, express, nextjs, javascript";
+  "frontend developer, backend developer, fullstack developer, web developer, typescript, react, mongodb, nodejs, express, nextjs, javascript";
 
 const Home = ({ pageContent }) => {
   const router = useRouter();
