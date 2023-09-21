@@ -6,6 +6,13 @@ const MetaTags = ({ title, description, img, children = [] }) => {
     defaultImg = `${process.env.NEXT_PUBLIC_BASE_URL}${img}`;
   }
 
+  let twitterImg = "";
+  if (img.includes("http")) {
+    twitterImg = img;
+  } else {
+    twitterImg = `${process.env.NEXT_PUBLIC_BASE_URL}${img}`;
+  }
+
   return (
     <Head>
       {/* HTML Meta Tags */}
@@ -30,7 +37,7 @@ const MetaTags = ({ title, description, img, children = [] }) => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={defaultImg} />
+      <meta name="twitter:image" content={twitterImg} />
     </Head>
   );
 };
