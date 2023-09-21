@@ -1,46 +1,31 @@
 import Home from "@/container/Home";
-import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { getPosts } from "../slices/posts";
+import { createClient } from "contentful";
 
-export default function RootPage({ posts }) {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getPosts(posts));
-  }, [posts]);
-
-  return <Home posts={posts} />;
+export default function RootPage({ data }) {
+  return <Home pageContent={data} />;
 }
 
-export async function getStaticProps(context) {
-  const client = new ApolloClient({
-    uri: "https://api.hashnode.com/",
-    cache: new InMemoryCache(),
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE,
+    environment: process.env.NEXT_PUBLIC_CONTENTFUL_ENVIRONMENT,
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
   });
 
-  const { data } = await client.query({
-    query: gql`
-      query GetPosts {
-        user(username: "singhlify") {
-          publication {
-            posts(page: 0) {
-              _id
-              title
-              brief
-              slug
-              dateUpdated
-            }
-          }
-        }
-      }
-    `,
-  });
+  let data = {};
+
+  try {
+    const response = await client.getEntry(
+      process.env.NEXT_PUBLIC_CONTENTFUL_HOMEPAGE_CONTENT_ID
+    );
+    data = response?.fields?.homepage;
+  } catch {
+    console.log("error>>>>", error);
+  }
 
   return {
     props: {
-      posts: data.user.publication.posts,
+      data,
     },
     revalidate: 10,
   };

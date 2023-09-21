@@ -5,22 +5,11 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    ${"" /* font-size: inherit; */}
   }
   
   html {
     scroll-behavior: smooth;
     font-size: 62.5%;
-    
-    ${
-			"" /* @media ${(props) => props.theme.md} {
-		  font-size: 56.25%;
-    }
-
-    @media ${(props) => props.theme.sm} {
-		  font-size: 50%;
-    } */
-		}
   }
   
   body {

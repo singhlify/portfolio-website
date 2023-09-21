@@ -1,44 +1,29 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/router";
-import axios from "axios";
-import Navbar from "@/components/Navbar/Navbar";
-import IntroSection from "@/components/IntroSection/IntroSection";
-import PostsSection from "@/components/PostsSection/PostsSection";
-import FooterSection from "@/components/FooterSection/FooterSection";
-import ProjectsSection from "@/components/ProjectsSection/ProjectsSection";
-import MetaTags from "@/components/MicroComponents/MetaTags";
+import {
+  Navbar,
+  IntroSection,
+  PostsSection,
+  FooterSection,
+  ProjectsSection,
+  MetaTags,
+} from "@/components";
 import { logo } from "assets";
 
 // for meta tags
-const title = "Gurjot Singh";
+const title = "Gurjot Singh | Full Stack Developer";
 const description =
-  "I'm Gurjot Singh, a Full-Stack geek & developer. I have been developing Web Apps since the beginning of 2020. In my free time I write blogs on HashNode. You can find me everywhere @Singhlify.";
+  "I'm Gurjot Singh, a Full-Stack geek & developer. I have been developing Web Apps since 2020. In my free time I write blogs on HashNode. You can find me everywhere @Singhlify.";
 const keywords =
-  "frontend developer, backend developer, fullstack developer, web developer, react, mongodb, nodejs, express, nextjs, javascript";
+  "frontend developer, backend developer, fullstack developer, web developer, typescript react, mongodb, nodejs, express, nextjs, javascript";
 
-const Home = () => {
+const Home = ({ pageContent }) => {
   const router = useRouter();
-  const [isLoaded, setIsLoaded] = useState(true);
-  const [pageContent, setPageContent] = useState({});
-
-  const getHomepageContent = async () => {
-    setIsLoaded(false);
-    try {
-      const { data } = await axios.get(
-        `${window.location.href}api/homepageContent`
-      );
-      setPageContent(data?.homepage);
-    } catch (error) {
-      // console.log("error>>>", error);
-    }
-    setIsLoaded(true);
-  };
 
   useEffect(() => {
     if (window.location.hash.slice(0, 1) === "#") {
       router.push("/");
     }
-    getHomepageContent();
   }, []);
 
   return (
@@ -59,7 +44,7 @@ const Home = () => {
 
       <PostsSection posts={pageContent?.articles} />
 
-      <ProjectsSection projects={pageContent?.projects} isLoaded={isLoaded} />
+      <ProjectsSection projects={pageContent?.projects} />
 
       <FooterSection />
     </>
