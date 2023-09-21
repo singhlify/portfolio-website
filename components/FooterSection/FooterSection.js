@@ -70,8 +70,8 @@ const FooterSection = () => {
         }}
       >
         <Image
-          src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-          alt="Buy Me A Coffee"
+          src={`https://ik.imagekit.io/${process.env.NEXT_PUBLIC_IMAGEKIT_ID}/bmc-button.png?latest`}
+          alt="Buy Me A Coffee - Singhlify"
           width={217}
           height={60}
         />
